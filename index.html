@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podedéx</title>
+
+    <link rel="stylesheet" href="./page.css">
+    <link rel="stylesheet" href="./elementos.css">
+    <link rel="stylesheet" href="./css/pokedex.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <img src="./img/pokemon-logo.png" alt="Pokemon">
+
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="../pokedex">Pokedex</a></li>
+            <li><a href="../quiz">Quiz</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="container">
+        
+        <section>
+            <div class="busca-wrap">
+                <input type="text" class="inputBusca" id="inputBuscaPokedex" list="lista-pokemons" placeholder="Digite o nome do pokemon">
+                <button class="btn btn-busca" id="btnBuscaPokedex">BUSCAR</button>
+                <button class="btn btn-limpar" id="btnLimparBuscaPokedex" disabled>LIMPAR</button>
+            </div>
+
+            <datalist id="lista-pokemons">
+ 
+            </datalist>
+
+        </section>
+
+        <section>
+            <div class="pokedex-wrap">
+
+                <div class="loading-pokemons">
+                    <img src="./img/pokebola-icon.png" alt="Carregando...">
+                </div>
+
+                <ul class="pokemons-lista">
+                    
+                    <!-- html carregado dinamicamente com o js -->
+
+                </ul>
+                
+                <div class="div-mensagem-wrap">
+                    <div class="div-mensagem">
+                        <div class="mensagem-fechar"><span>x</span></div>
+                        <span>Para carregar mais pokemons, role a tela para baixo</span>
+                    </div>
+                </div>
+
+                <div id="div-fim-pagina" style="height:100px;">
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <div class="modal-container" id="modalConfirmacao">
+        <div class="modal modal-confirmacao">
+            <div class="modal-body">
+                
+                <img src="../img/question-icon.png" alt="Dúvida|Question">
+
+                <h2 class="modal-titulo">Confirma essa ação?</h2> 
+
+                <button class="btn btn-confirmar" value="true">Sim</button>
+                <button class="btn btn-negar" value="false">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container" id="modalPokemon">
+        <div class="modal modal-pokemon">
+            <div class="modal-fechar"> <button class="btn-fechar">x</button> </div>
+            <div class="modal-body">
+                
+                <!-- carregado dinamicamente com js -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/pokedex.js" defer></script>
+</body>
+</html>
